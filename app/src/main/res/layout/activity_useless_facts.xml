@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:padding="100sp"
         android:background="#51b46d"
-        tools:context=".FunFactActivity">
+        tools:context=".UselessFactActivity">
 
     <TextView
             android:id="@+id/textView1"
@@ -20,7 +20,7 @@
             android:text="Did you know?"/>
 
     <TextView
-            android:id="@+id/funFactTextView"
+            android:id="@+id/uselessFactTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -31,12 +31,12 @@
             />
 
     <Button
-            android:id="@+id/showFunFactButton"
-            android:layout_width="100sp"
+            android:id="@+id/showUselessFactButton"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:text="FUN FACT"/>
+            android:text="USELESS FACT"/>
 
 </RelativeLayout>

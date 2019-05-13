@@ -1,4 +1,4 @@
-package com.example.funfacts
+package com.example.uselessfacts
 
 import org.junit.Test
 
