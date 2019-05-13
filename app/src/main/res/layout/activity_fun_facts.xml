@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="100sp"
+        android:background="#51b46d"
+        tools:context=".FunFactActivity">
+
+    <TextView
+            android:id="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#90FFFFFF"
+            android:text="Did you know?"/>
+
+    <TextView
+            android:id="@+id/funFactTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            android:textColor="#FFFF"
+            />
+
+    <Button
+            android:id="@+id/showFunFactButton"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="FUN FACT"/>
+
+</RelativeLayout>
