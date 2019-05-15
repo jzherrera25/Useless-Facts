@@ -24,7 +24,6 @@ class UselessFactViewModel : ViewModel() {
             }
 
             override fun onResponse(call: Call<UselessFactResult>, response: Response<UselessFactResult>) {
-                Log.d("UselessFactViewModel", response.body()!!.text)
                 this@UselessFactViewModel.uselessFact.value = response.body()!!.text
             }
         })

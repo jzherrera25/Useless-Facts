@@ -15,6 +15,11 @@ class UselessFactActivity : AppCompatActivity() {
     private lateinit var uselessFactTextView : TextView
     private lateinit var showUselessFactButton : Button
     private lateinit var uselessFactViewModel : UselessFactViewModel
+    private var uselessFactObserver = Observer<String> { newUselessFact ->
+        if (this::uselessFactTextView.isInitialized) {
+            this.uselessFactTextView.text = newUselessFact
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +29,7 @@ class UselessFactActivity : AppCompatActivity() {
         this.uselessFactTextView = findViewById(R.id.uselessFactTextView)
         this.showUselessFactButton  = findViewById(R.id.showUselessFactButton)
 
-        var uselessFact = Observer<String> { newUselessFact ->
-            this.uselessFactTextView.text = newUselessFact
-        }
-
-        this.uselessFactViewModel.uselessFact.observe(this, uselessFact)
+        this.uselessFactViewModel.uselessFact.observe(this, this.uselessFactObserver)
 
         // Register onClickerListener
         this.showUselessFactButton.setOnClickListener {
@@ -39,5 +40,7 @@ class UselessFactActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
+
+        this.uselessFactViewModel.uselessFact.removeObserver(this.uselessFactObserver)
     }
 }
