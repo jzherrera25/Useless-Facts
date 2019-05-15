@@ -13,9 +13,9 @@ class UselessFactViewModel : ViewModel() {
 
     private val uselessFactApiService: UselessFactApiService = UselessFactApiService.create()
 
-    lateinit var uselessFact : MutableLiveData<String>
+    var uselessFact : MutableLiveData<String> = MutableLiveData()
 
-    // GET Api for random usless fact
+    // GET Api for random useless fact
     fun doAction() {
         val factory = this.uselessFactApiService.getUselessFact()
         factory.enqueue(object : Callback<UselessFactResult> {
@@ -24,9 +24,8 @@ class UselessFactViewModel : ViewModel() {
             }
 
             override fun onResponse(call: Call<UselessFactResult>, response: Response<UselessFactResult>) {
-                Log.d("UselessFactViewModel", "Received useless fact.")
                 Log.d("UselessFactViewModel", response.body()!!.text)
-                uselessFact.value = response.body()!!.text
+                this@UselessFactViewModel.uselessFact.value = response.body()!!.text
             }
         })
     }
