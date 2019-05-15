@@ -2,4 +2,4 @@
 An Android app that uses a web API to get random useless facts. 
 Made this app to start getting familiarized with Android.
 
-![useless-facts-app](Useless%20Facts%20App.gif){ width=50% heigh=50% }
+<img src="Useless%20Facts%20App.gif" width="50%" height="50%" />
