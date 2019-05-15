@@ -1,8 +1,11 @@
 package com.example.uselessfacts
 
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 
@@ -22,8 +25,8 @@ class UselessFactActivity : AppCompatActivity() {
 
         // Register onClickerListener
         this.showUselessFactButton.setOnClickListener {
-            // Grab random fact from api and set funFactTextView text to the random fact.
-            this.showUselessFactButton.text = this.uselessFactViewModel.uselessFact
+            // Do action
+            this.uselessFactViewModel.doAction()
         }
     }
 }
